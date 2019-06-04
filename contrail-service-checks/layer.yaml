@@ -1,0 +1,14 @@
+includes:
+  - 'layer:basic'
+  - 'interface:keystone-credentials'
+  - 'interface:nrpe-external-master'
+options:
+  basic:
+    use_venv: true
+    packages:
+      - nagios-nrpe-server
+      - python3-keystoneclient
+      - python3-openstackclient
+      - python3-requests
+      - python3-yaml
+repo: https://github.com/n-pochet/contrail-service-checks

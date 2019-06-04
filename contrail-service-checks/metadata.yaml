@@ -1,0 +1,25 @@
+name: contrail-service-checks
+summary: This charm provides Contrail service checks for Nagios
+maintainer: Andrey Pavlov <andrey.mp@gmail.com>
+description: |
+  This charm provides Contrail service checks for Nagios
+tags:
+  - contrail
+  - openstack
+  - monitoring
+subordinate: false
+series:
+- bionic
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+    optional: true
+requires:
+  identity-credentials:
+    interface: keystone-credentials
+    optional: true
+extra-bindings:
+  public:
+  admin:
+  internal:
